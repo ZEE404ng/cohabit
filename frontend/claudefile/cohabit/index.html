@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Cohabit – find verified flatmates in Lagos and Abuja</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header><div class="wrap">
+<a class="logo" href="#home"><i></i>Cohabit</a>
+<nav aria-label="Main">
+<a href="#home" data-p="home">Home</a>
+<a href="#listings" data-p="listings">Listings</a>
+<a href="#register" data-p="register">Join</a>
+</nav></div></header>
+
+<main id="home" data-page>
+<div class="hero"><div class="wrap">
+<h1>Share a home in Lagos or Abuja with people you can trust.</h1>
+<p>Browse rooms, match with verified flatmates, and split the upfront rent instead of facing it alone.</p>
+<a class="btn" href="#listings">Browse rooms</a><a class="btn alt" href="#register">Create a profile</a>
+</div></div>
+<section><div class="wrap">
+<h2>How it works</h2>
+<div class="three">
+<div><h3>Make a profile</h3><p>Tell us your budget, area, and daily habits. Listers add a room or a lease to fill.</p></div>
+<div><h3>See who fits</h3><p>Rooms show the area, rent, and house rules so you can rule out bad fits before you message anyone.</p></div>
+<div><h3>Move in together</h3><p>Verified members, clear house rules, and a shared plan for paying rent up front.</p></div>
+</div>
+</div></section>
+<section style="padding-top:0"><div class="wrap">
+<p class="note">Most flatmate problems start with someone nobody checked. Verification comes first here, before listings or chat.</p>
+</div></section>
+</main>
+
+<main id="listings" data-page hidden>
+<section><div class="wrap">
+<h2>Rooms and flatshares</h2>
+<p class="meta">Sample listings for testing. Rent is per person, per year.</p>
+<div class="filters">
+<div><label for="fc">City</label><select id="fc"><option value="">Lagos and Abuja</option><option value="Lagos">Lagos</option><option value="Abuja">Abuja</option></select></div>
+<div><label for="fa">Area</label><select id="fa"><option value="">All areas</option></select></div>
+<div><label for="fb">Max rent (₦ per year)</label><select id="fb">
+<option value="">Any budget</option><option value="500000">₦500,000</option><option value="800000">₦800,000</option><option value="1200000">₦1,200,000</option><option value="2000000">₦2,000,000</option></select></div>
+<div><label for="fv">Show</label><select id="fv"><option value="">All listers</option><option value="1">Verified only</option></select></div>
+</div>
+<p class="meta" id="count" aria-live="polite"></p>
+<div class="grid" id="grid"></div>
+</div></section>
+</main>
+
+<main id="register" data-page hidden>
+<section><div class="wrap">
+<h2>Create your profile</h2>
+<p class="meta">Takes about a minute. Details stay in this browser during testing.</p>
+<form id="f" novalidate>
+<div><label>I am</label>
+<div class="seg" role="radiogroup" aria-label="I am">
+<label><input type="radio" name="role" value="seeker" checked> Looking for a room</label>
+<label><input type="radio" name="role" value="lister"> Offering a room</label></div></div>
+<div><label for="n">Full name</label><input id="n" name="n" autocomplete="name"><div class="err" data-e="n"></div></div>
+<div><label for="e">Email</label><input id="e" name="e" type="email" autocomplete="email"><div class="err" data-e="e"></div></div>
+<div><label for="ph">Phone (WhatsApp)</label><input id="ph" name="ph" type="tel" autocomplete="tel" placeholder="0803 000 0000"><div class="err" data-e="ph"></div></div>
+<div><label for="c">City</label><select id="c" name="c"><option value="Lagos">Lagos</option><option value="Abuja">Abuja</option></select></div>
+<div><label for="a">Preferred area</label><select id="a" name="a"><option value="">Choose an area</option></select><div class="err" data-e="a"></div></div>
+<div><label for="b">Budget (₦ per year)</label><input id="b" name="b" type="number" min="0" step="50000" inputmode="numeric"><div class="err" data-e="b"></div></div>
+<div><label for="l">Daily rhythm</label><select id="l" name="l"><option value="early">Early riser</option><option value="late">Night owl</option><option value="mixed">Depends on the day</option></select></div>
+<button class="btn on-light" type="submit">Create profile</button>
+</form>
+<div class="done" id="done" role="status" hidden>
+<h3>Profile created</h3>
+<p id="doneMsg" style="margin:8px 0 16px"></p>
+<a class="btn on-light" href="#listings">Browse rooms</a>
+</div>
+</div></section>
+</main>
+
+<footer><div class="wrap">Cohabit is a test prototype. Listings are sample data.</div></footer>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

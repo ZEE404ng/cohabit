@@ -1,0 +1,17 @@
+POST http://localhost:2999/register
+Content-Type: application/json
+
+{
+    "username": "zeed",
+    "password": "12345"
+}
+
+###
+
+POST http://localhost:2999/login
+Content-Type: application/json
+
+{
+    "username": "zeed",
+    "password": "12345"
+}
